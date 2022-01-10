@@ -25,3 +25,5 @@ update AddressBook set Zip=651008 where FirstName='CHRIS'
 
 delete AddressBook where FirstName='ANGEL'
 
+select City from AddressBook where FirstName='MICHAEL'
+select State from AddressBook where LastName='KRISH'
