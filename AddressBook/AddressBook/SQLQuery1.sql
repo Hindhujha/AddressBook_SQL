@@ -23,3 +23,5 @@ Insert into AddressBook values(	'ANGEL','MARCK','ROSE STREETS','BANGALORE','KARN
 
 update AddressBook set Zip=651008 where FirstName='CHRIS'
 
+delete AddressBook where FirstName='ANGEL'
+
