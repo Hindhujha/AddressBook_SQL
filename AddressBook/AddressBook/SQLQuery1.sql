@@ -21,9 +21,16 @@ Insert into AddressBook values(	'MICHAEL','JACKSON','SK BUILDING','CHENNAI','TAM
 Insert into AddressBook values(	'STEVE','GEORGE','FLAIR ROADS','HYDERABAD','ANDHRA PRADESH',632008,'9234567899','steve99@gmail.com')
 Insert into AddressBook values(	'ANGEL','MARCK','ROSE STREETS','BANGALORE','KARNATAKA',651321,'9199067890','angelmarck12@gmail.com')
 
-update AddressBook set Zip=651008 where FirstName='CHRIS'
+update AddressBook set Zip=651008 where FirstName='CHRIS' ---update contact
 
-delete AddressBook where FirstName='ANGEL'
+delete AddressBook where FirstName='ANGEL' --delete contact
 
 select City from AddressBook where FirstName='MICHAEL'
 select State from AddressBook where LastName='KRISH'
+
+select count (*) from AddressBook
+
+select count (*) from AddressBook where state='TAMILNADU' --shows no.of state similar to tamilnadu
+
+select count (*) from AddressBook where City='BANGALORE'----shows no.of city similar to bangalore
+
