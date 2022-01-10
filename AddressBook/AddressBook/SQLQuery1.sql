@@ -42,4 +42,12 @@ add
 Types varchar(50),---friends/profession/family
 TypeName varchar(50)--name of types
 
+update AddressBook set Types='FRIEND',TypeName='SITA' where FirstName='ANNIE';
+update AddressBook set Types='PROFESSION',TypeName='ENGINEER' where FirstName='CHRIS';
+update AddressBook set Types='FRIEND',TypeName='RAM' where FirstName='MICHAEL';
+update AddressBook set Types='PROFESSION',TypeName='DOCTOR' where FirstName='STEVE';
+
+
+select count(Types) from AddressBook --count by type
+
 
