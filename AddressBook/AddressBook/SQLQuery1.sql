@@ -50,4 +50,5 @@ update AddressBook set Types='PROFESSION',TypeName='DOCTOR' where FirstName='STE
 
 select count(Types) from AddressBook --count by type
 
+Insert into AddressBook values(	'ANGEL','BILL','KOP NAGAR','BANGALORE','HYDERABAD',652001,'9234780890','anjel100@gmail.com','FRIEND','REENA')
 
