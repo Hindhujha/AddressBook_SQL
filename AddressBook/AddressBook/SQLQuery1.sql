@@ -52,3 +52,37 @@ select count(Types) from AddressBook --count by type
 
 Insert into AddressBook values(	'ANGEL','BILL','KOP NAGAR','BANGALORE','HYDERABAD',652001,'9234780890','anjel100@gmail.com','FRIEND','REENA')
 
+Alter table AddressBook
+add 
+PersonId int identity(1000,1) primary key
+
+---another table created for normaliztion
+create table PersonInfo(
+ PersonID int identity(1000,1)  foreign key references AddressBook(PersonId),
+PhoneNumber varchar(100),
+email varchar(100))
+
+select * from PersonInfo
+
+Insert into PersonInfo values(	'9994567890','anniekris@gmail.com')
+Insert into PersonInfo values(	'9234224222','chris1234@gmail.com')
+Insert into PersonInfo values(	'9994567890','michael978@gmail.com')
+Insert into PersonInfo values(	'9234224001','steve457george@gmail.com')
+Insert into PersonInfo values(	'9234224222','angelbill@gmail.com')
+
+-----retrieving datas
+select AddressBook.City,AddressBook.State from AddressBook inner join PersonInfo 
+on AddressBook.PersonID=PersonInfo.PersonID 
+
+select count(City) from AddressBook inner join PersonInfo
+on AddressBook.PersonID=PersonInfo.PersonID
+
+select count(*) from AddressBook inner join PersonInfo
+on AddressBook.PersonID=PersonInfo.PersonID where City='chennai'Group By City
+
+select City from AddressBook inner join PersonInfo 
+on AddressBook.PersonID=PersonInfo.PersonID order by FirstName ASC 
+
+select count(Types) from AddressBook inner join PersonInfo
+on AddressBook.PersonID=PersonInfo.PersonID where Types='FRIEND' Group By Types
+
