@@ -35,4 +35,11 @@ select count (*) from AddressBook where state='TAMILNADU' --shows no.of state si
 select count (*) from AddressBook where City='BANGALORE'----shows no.of city similar to bangalore
 
 select * from AddressBook  order by FirstName ASC --sort contacts alphabetically 
+----table altered
+
+Alter table AddressBook
+add 
+Types varchar(50),---friends/profession/family
+TypeName varchar(50)--name of types
+
 
